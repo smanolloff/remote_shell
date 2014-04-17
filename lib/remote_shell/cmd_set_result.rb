@@ -27,6 +27,6 @@ class RemoteShell::CmdSetResult
   end
 
   def success?
-    @results.map(&:ecode).any? { |e| e != 0 }
+    @results.map(&:ecode).all?(&:zero?)
   end
 end

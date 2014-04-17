@@ -1,6 +1,7 @@
 require 'shell_cmd'
 require 'net/ssh'
 require 'ostruct'
+require 'shellwords'
 
 module RemoteShell
 end

@@ -12,7 +12,7 @@ describe RemoteShell::CmdSetResult do
 
   its(:cmd_set) { should be(cmd_set) }
   its(:output) { should eq("\n this!\n") }
-  its(:success?) { should eq(false) }
+  its(:success?) { should eq(true) }
   its(:report) do
     should eq(
       <<-END.gsub(/^\s+\|/, '')
