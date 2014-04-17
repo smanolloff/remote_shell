@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe RemoteShell::CmdSet do
   let(:ssh) { { user: 'simo', pass: '123456', fqdn: 'localhost' } }
-  let(:cmd) { ShellCmd.new('cat', '/etc/redhat-release') }
+  let(:cmd) { ShellCmd.new('cat', '/etc/passwd') }
   let(:cmd_set) { RemoteShell::CmdSet.new(ssh[:fqdn], ssh[:user], ssh[:pass]) }
 
   subject { cmd_set }
